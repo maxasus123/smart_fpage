@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Smart Login pages.
+ *
+ * Inspired by IN2PIRE (contact@inspire.vn).
+ */
+
+/**
+ * Implements hook_install().
+ */
+function smart_fpage_install() {
+
+  variable_set('smart_fpage_open', '');
+  variable_set('smart_fpage_node', '1');
+
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function smart_fpage_uninstall() {
+
+  variable_del('smart_fpage_open');
+  variable_del('smart_fpage_node');
+
+}

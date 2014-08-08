@@ -1,0 +1,30 @@
+<?php
+/*
+ * Implements hook_menu().
+ */ 
+function smart_fpage_menu() {
+
+  $items['admin/config/system/smart-fpage'] = array(
+      'title' => 'Set frontpage',
+      'description' => 'Frontpage settings.',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('_smart_fpage_config_form'),
+      'access arguments' => array('administer site configuration'),
+      'file' => 'smart_fpage.admin.inc',
+    );
+    return $items;
+}
+
+/**
+ * Implements hook_page_alter.
+ * @param type $page
+ */
+function smart_fpage_page_alter(&$page){
+  global $user;
+
+  $is_fron_page = drupal_is_front_page();
+  if($is_fron_page && $user->uid){
+    $redirect = 'node/' . variable_get('smart_fpage_node', '');
+    drupal_goto($redirect);
+  }
+}

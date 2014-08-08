@@ -1,0 +1,8 @@
+name = Smart Front Page
+description = Set Front Page
+package = Hugsolution
+core = 7.x
+
+configure = admin/config/system/smart-fpage
+
+files[] = smart_fpage.module
