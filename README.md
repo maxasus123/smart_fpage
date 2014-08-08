@@ -1,4 +1,4 @@
-smart_fpage
+smart_fpage (โมดูลยังไม่สมบูรณ์)
 ===========
 
 โมดูสำหรับ Drupal 7
