@@ -2,12 +2,8 @@
 
 /**
  * @file
- * Smart Login pages.
+ * Smart fpage pages.
  *
- * Inspired by IN2PIRE (contact@inspire.vn).
- */
-
-/**
  * Implements hook_install().
  */
 function smart_fpage_install() {
